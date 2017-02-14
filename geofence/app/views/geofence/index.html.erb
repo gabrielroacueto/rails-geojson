@@ -1,0 +1,10 @@
+
+<h1>Google Maps Tut</h1>
+<div id="map-container">
+  <div id="map-canvas"></div>
+</div>
+<h2> JSON </h2>
+<%= form_tag "submit", :id => "my_form" do -%>
+    GeoJSON Output: <%= text_area_tag "geojson" -%>
+    <%= submit_tag "Submit" %>
+<% end -%>
