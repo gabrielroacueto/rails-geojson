@@ -1,5 +1,7 @@
 class GeofenceController < ApplicationController
   def index
-    json = params[:geojson]
+    @bounds = Bound.new(params[:geojson])
+    logger.debug(@bounds)
+    @bounds.save
   end
 end

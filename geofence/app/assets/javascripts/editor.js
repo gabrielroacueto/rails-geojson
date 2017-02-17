@@ -39,7 +39,7 @@ function initialize() {
     dropContainer = document.getElementById('drop-container');
     panel = document.getElementById('panel');
     var mapContainer = document.getElementById('map-holder');
-    geoJsonInput = document.getElementById('geojson');
+    geoJsonInput = document.getElementById('geojson_array');
     downloadLink = document.getElementById('download-link');
 
     // Resize the geoJsonInput textarea.
@@ -81,6 +81,7 @@ var info;
 function refreshGeoJsonFromData() {
     map.data.toGeoJson(function(geoJson) {
         geoJsonInput.value = JSON.stringify(geoJson, null, 2);
+
         refreshDownloadLinkFromGeoJson();
     });
 }
@@ -195,4 +196,6 @@ function loadScript() {
         '&callback=initialize';
     document.body.appendChild(script);
 }
+
+
 

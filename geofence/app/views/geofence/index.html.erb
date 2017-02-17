@@ -4,7 +4,7 @@
   <div id="map-canvas"></div>
 </div>
 <h2> JSON </h2>
-<%= form_tag "submit", :id => "my_form" do -%>
-    GeoJSON Output: <%= text_area_tag "geojson" -%>
+<%= form_tag "bounds", :id => "bounds" do -%>
+    GeoJSON Output: <%= text_area_tag "geojson_array" -%>
     <%= submit_tag "Submit" %>
 <% end -%>

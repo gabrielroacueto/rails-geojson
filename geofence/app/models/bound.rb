@@ -1,0 +1,2 @@
+class Bound < ApplicationRecord
+end
