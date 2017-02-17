@@ -5,6 +5,7 @@
 </div>
 <h2> JSON </h2>
 <%= form_tag "bounds", :id => "bounds" do -%>
+    Polygon Name: <%= text_area_tag "polygon_name" -%>
     GeoJSON Output: <%= text_area_tag "geojson_array" -%>
     <%= submit_tag "Submit" %>
 <% end -%>

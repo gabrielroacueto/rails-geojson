@@ -3,8 +3,7 @@ class CreateBounds < ActiveRecord::Migration[5.0]
     create_table :bounds do |t|
       t.string :lat
       t.string :long
-      t.string :poly_id
-
+      t.belongs_to :polygon, foreign_key: true
       t.timestamps
     end
   end
